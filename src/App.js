@@ -6,6 +6,7 @@ import { fetchingCountries } from './redux/actions'
 import Home from './components/Home'
 import CountryISO from './components/ISOComponents/CountryISO'
 import CountryLatLong from './components/LatLongComponents/CountryLatLong'
+import EfficientRoute from './components/EfficientRouteComponents/EfficientRoute'
 
 class App extends React.Component {
   componentDidMount(){
@@ -19,6 +20,7 @@ class App extends React.Component {
           <Route exact path='/' render={ ownProps => <Home {...ownProps}/>}/>
           <Route exact path='/iso/:id' render={ ownProps => <CountryISO {...ownProps}/> }/>
           <Route exact path='/lat/:lat_min-:lat_max/long/:long_min-:long_max' render={ ownProps => <CountryLatLong {...ownProps}/> }/>
+          <Route exact path='/eff' render={ ownProps => <EfficientRoute {...ownProps}/>}/>
         </Switch>
       </div>
     )
