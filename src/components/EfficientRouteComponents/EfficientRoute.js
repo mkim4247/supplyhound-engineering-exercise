@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getDistance } from 'geolib';
 import Nav from '../Nav'
 import EfficientRouteContainer from './EfficientRouteContainer'
 

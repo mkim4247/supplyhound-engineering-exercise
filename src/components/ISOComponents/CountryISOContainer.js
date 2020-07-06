@@ -19,6 +19,8 @@ const CountryISOContainer = props => {
   )
 }
 
+// this was added for checking if user went directly to iso url or not
+// in findCountryByISO, add conditional to see if countryISO exists, if so don't need find again 
 const mapStatetoProps = state => {
   return {
     countryISO: state.countryISO

@@ -17,10 +17,10 @@ class App extends React.Component {
     return(
       <div className='app'>
         <Switch>
-          <Route exact path='/' render={ ownProps => <Home {...ownProps}/>}/>
+          <Route exact path='/' render={ ownProps => <Home {...ownProps}/> }/>
           <Route exact path='/iso/:id' render={ ownProps => <CountryISO {...ownProps}/> }/>
           <Route exact path='/lat/:lat_min-:lat_max/long/:long_min-:long_max' render={ ownProps => <CountryLatLong {...ownProps}/> }/>
-          <Route exact path='/eff' render={ ownProps => <EfficientRoute {...ownProps}/>}/>
+          <Route exact path='/eff_route/:city1-:city2-:city3-:city4' render={ ownProps => <EfficientRoute {...ownProps}/> }/>
         </Switch>
       </div>
     )
