@@ -27,10 +27,20 @@ const countryCoordinatesReducer = ( state = { 'lat-min': '', 'lat-max': '', 'lon
   }
 }
 
+const citiesReducer = ( state = [], action ) => {
+  switch(action.type){
+    case "SELECT_CITY":
+      return action.cities
+    default:
+      return state;
+  }
+}
+
 const rootReducer = combineReducers({
   countries: countriesReducer,
   countryISO: countryISOReducer,
-  coordinates: countryCoordinatesReducer
+  coordinates: countryCoordinatesReducer,
+  cities: citiesReducer
 });
 
 export default rootReducer;

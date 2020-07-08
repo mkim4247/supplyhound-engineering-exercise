@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Grid } from 'semantic-ui-react'
 import ISOContainer from './InputComponents/ISOContainer'
 import LatLongContainer from './InputComponents/LatLongContainer'
+import CitiesRouteContainer from './InputComponents/CitiesRouteContainer'
 import Nav from './Nav'
 
 const Home = props => {
@@ -20,6 +21,11 @@ const Home = props => {
             </Grid.Column>
             <Grid.Column>
               <LatLongContainer ownProps={props}/>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <CitiesRouteContainer ownProps={props}/>
             </Grid.Column>
           </Grid.Row>
         </Grid>

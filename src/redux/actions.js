@@ -38,3 +38,7 @@ export const selectingCoordinates = (type, val) => {
 const selectCoordinates = coordinates => {
   return { type: "SELECT_COORDINATES", coordinates }
 }
+
+export const selectCities = cities => {
+  return { type: "SELECT_CITY", cities }
+}
